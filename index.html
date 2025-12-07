@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Tareas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Lista de Tareas</h1>
+
+  <div id="layout">
+
+    <!-- Columna izquierda: formulario -->
+    <div id="left-column">
+      <h2>Agregar nueva tarea</h2>
+
+      <form id="task-form">
+        <!-- Campo de texto para el titulo de la tarea -->
+        <input
+          id="task-title"
+          type="text"
+          placeholder="Título de la tarea"
+          required
+          minlength="3"
+        >
+        <!-- Checkbox para marcar si esta ya fue completada o no -->
+        <label>
+          <input id="task-completed" type="checkbox">
+          Completada
+        </label>
+        <!-- Boton de submit para enviar el dato a la lista de tareas -->
+        <button type="submit">Agregar Tarea</button>
+      </form>
+    </div>
+
+    <!-- Columna derecha: tabla de tareas -->
+    <div id="right-column">
+      <!-- Etiqueta inicial para indicar que esta cargando las lista de tareas. -->
+      <p id="loading">Cargando...</p>
+
+      <table id="task-table">
+        <thead>
+          <tr>
+            <!-- Cada componente de la tabla solo tendra Titulo y Check -->
+            <th>Título</th>
+            <th>Completada</th>
+          </tr>
+        </thead>
+        <!-- Etiqueta usada para cargar las tareas por Javascript -->
+        <tbody id="task-body"></tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- Llamada al archivo Javascript -->
+  <script src="app.js"></script>
+</body>
+</html>

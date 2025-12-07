@@ -1,0 +1,164 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+#left-column h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  /* Línea decorativa */
+  padding-bottom: 6px;
+  border-bottom: 3px solid #4CAF50;
+  margin-bottom: 15px;
+}
+
+/* Contenedor del formulario */
+#task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 12px;
+
+  /* Sombra elegante */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e6e6e6;
+
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/*Al colocar el mouse sobre el formulario*/
+#task-form:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Input de texto */
+#task-form input[type="text"] {
+  padding: 12px 14px;
+  font-size: 1rem;
+
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background: #fafafa;
+
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+/*Campo de tento para titulo de tarea*/
+#task-form input[type="text"]:focus {
+  border-color: #4CAF50;
+  background: #fff;
+  outline: none;
+}
+
+/* Checkbox junto con la etiqueta */
+#task-form label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Botón de Submit*/
+#task-form button {
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+
+  background: #4CAF50;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+/*Al colocar el mouse sobre el boton*/
+#task-form button:hover {
+  background: #45a049;
+  transform: translateY(-1px);
+}
+
+#task-form button:active {
+  transform: translateY(1px);
+}
+
+/* separación entre columnas */
+#layout {
+  display: flex;
+  gap: 50px;
+}
+
+
+/* Columna derecha (tabla de tareas) */
+#right-column {
+  width: 60%;
+}
+
+#loading {
+  font-style: italic;
+  color: #555;
+}
+
+/* Contenedor de la tabla */
+#task-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden; /* permite que los bordes redondeados afecten toda la tabla */
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Encabezados */
+#task-table thead {
+  background: #4CAF50; 
+  color: white;
+}
+
+#task-table th {
+  padding: 14px;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Filas del cuerpo */
+#task-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 0.95rem;
+}
+
+/* Hover en filas */
+#task-table tbody tr:hover {
+  background: #f5fdf7;
+}
+
+/* Última fila sin borde inferior */
+#task-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Ajuste visual para la columna de "Completada" */
+#task-table td:nth-child(2) {
+  width: 120px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
